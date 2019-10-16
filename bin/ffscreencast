@@ -41,7 +41,7 @@ NAME="Screencast ${DATE} at ${TIME}"
 
 # Where to save it
 DIR="${HOME}/Desktop"
-
+OUTPUT="\"${DIR}/${NAME}.${OUTPUT_EXT}\""
 
 
 ############################################################
@@ -1217,7 +1217,7 @@ if [ "${RECORD_C}" = "yes" ]; then
 fi
 
 FFMPEG="${FFMPEG} -threads 0"
-FFMPEG="${FFMPEG} \"${DIR}/${NAME}.${OUTPUT_EXT}\""
+FFMPEG="${FFMPEG} ${OUTPUT}
 
 
 #### RUN
